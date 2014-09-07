@@ -2,7 +2,6 @@
 require 'gollum/app'
 require 'omnigollum'
 require 'omniauth-github'
-require 'omniauth-twitter'
 
 OmniAuth.config.full_host = 'uri'
 
@@ -17,7 +16,6 @@ wiki_options = {
 omnigollum_options = {
   providers: Proc.new do
     provider :github, 'key', 'secret', scope: 'user'
-    provider :twitter, 'key', 'secret'
   end,
   dummy_auth: false
 }
