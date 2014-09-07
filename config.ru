@@ -2,7 +2,9 @@
 require 'gollum/app'
 require 'omnigollum'
 require 'omniauth-github'
- 
+
+OmniAuth.config.full_host = 'uri'
+
 gollum_path = '/var/lib/gollum/wiki'
 
 wiki_options = {
