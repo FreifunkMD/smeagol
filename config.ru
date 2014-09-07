@@ -16,7 +16,7 @@ wiki_options = {
 
 omnigollum_options = {
   providers: Proc.new do
-    provider :github, 'key', 'secret', scope: 'user',
+    provider :github, 'key', 'secret', scope: 'user'
     provider :twitter, 'key', 'secret'
   end,
   dummy_auth: false
