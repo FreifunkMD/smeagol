@@ -10,7 +10,8 @@ gollum_path = ENV['WIKI_REPOSITORY_PATH']
 wiki_options = {
   universal_toc: false,
   mathjax: false,
-  live_preview: false
+  live_preview: false,
+  user_icons: 'gravatar'
 }
 
 omnigollum_options = {
