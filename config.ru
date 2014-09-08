@@ -25,5 +25,6 @@ Precious::App.set(:default_markup, :markdown)
 Precious::App.set(:wiki_options, wiki_options)
 Precious::App.set(:environment, :production)
 Precious::App.set(:omnigollum, omnigollum_options)
+Precious::App.set(:protection, except: :http_origin)
 Precious::App.register(Omnigollum::Sinatra)
 run Precious::App
