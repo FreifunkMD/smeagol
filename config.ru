@@ -5,7 +5,7 @@ require 'omniauth-github'
 
 OmniAuth.config.full_host = ENV['WIKI_URL']
 
-gollum_path = ENV['WIKI_PATH']
+gollum_path = ENV['WIKI_REPOSITORY_PATH']
 
 wiki_options = {
   universal_toc: false,
