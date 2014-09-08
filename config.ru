@@ -3,19 +3,19 @@ require 'gollum/app'
 require 'omnigollum'
 require 'omniauth-github'
 
-OmniAuth.config.full_host = 'uri'
+OmniAuth.config.full_host = ENV['WIKI_URL']
 
-gollum_path = '/var/lib/gollum/wiki'
+gollum_path = ENV['WIKI_PATH']
 
 wiki_options = {
   universal_toc: false,
   mathjax: false,
-  live_preview: true
+  live_preview: false
 }
 
 omnigollum_options = {
   providers: Proc.new do
-    provider :github, 'key', 'secret'
+    provider :github, ENV['WIKI_GITHUB_CLIENT_ID'], ENV['WIKI_GITHUB_CLIENT_SECRET']
   end,
   dummy_auth: false
 }
