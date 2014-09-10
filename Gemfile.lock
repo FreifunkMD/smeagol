@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/apfohl/gollum.git
-  revision: 780d48679d78abbc651d66553aeb558afe3f6587
+  revision: 6db06ce0b4469d09bd676b57a5ba88b573aba6c5
   branch: ffmd
   specs:
     gollum (3.0.0)
@@ -37,7 +37,7 @@ GEM
     github-markdown (0.6.6)
     github-markup (1.1.2)
       posix-spawn (~> 0.3.8)
-    gitlab-grit (2.6.10)
+    gitlab-grit (2.6.11)
       charlock_holmes (~> 0.6)
       diff-lcs (~> 1.1)
       mime-types (~> 1.15)
