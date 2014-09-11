@@ -11,7 +11,9 @@ wiki_options = {
   universal_toc: false,
   mathjax: false,
   live_preview: false,
-  user_icons: 'gravatar'
+  user_icons: 'gravatar',
+  allow_uploads: 'dir',
+  show_all: true
 }
 
 omnigollum_options = {
