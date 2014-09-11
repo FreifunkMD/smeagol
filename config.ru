@@ -12,7 +12,6 @@ wiki_options = {
   mathjax: false,
   live_preview: false,
   user_icons: 'gravatar',
-  allow_uploads: 'dir',
   show_all: true
 }
 

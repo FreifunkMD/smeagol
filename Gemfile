@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'gollum', git: 'https://github.com/apfohl/gollum.git', branch: 'ffmd'
+gem 'gollum', git: 'https://github.com/FreifunkMD/gollum.git', branch: 'ffmd'
 gem 'omnigollum', git: 'https://github.com/arr2036/omnigollum.git'
 gem 'omniauth-github', '~> 1.1.2'
 gem 'unicorn', '~> 4.8.3'

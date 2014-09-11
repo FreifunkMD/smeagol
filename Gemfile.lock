@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/apfohl/gollum.git
-  revision: 864a36d8d0d4ecadb75d46e66903c6e858c88b45
+  remote: https://github.com/FreifunkMD/gollum.git
+  revision: 75097e42f0ba906b6fa23cf3850420031ff8303f
   branch: ffmd
   specs:
     gollum (3.0.0)
