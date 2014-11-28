@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'gollum', git: 'https://github.com/FreifunkMD/gollum.git', branch: 'ffmd'
-gem 'omnigollum', git: 'https://github.com/arr2036/omnigollum.git'
+gem 'omnigollum', '~> 0.1.4'
 gem 'omniauth-github', '~> 1.1.2'
 gem 'unicorn', '~> 4.8.3'
 gem 'foreman', '~> 0.75.0'
