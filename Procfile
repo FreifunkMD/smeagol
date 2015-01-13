@@ -1,1 +1,1 @@
-wiki: bundle exec unicorn -c unicorn/unicorn.conf.rb config.ru
+smeagol: bundle exec unicorn -c unicorn/unicorn.conf.rb config.ru

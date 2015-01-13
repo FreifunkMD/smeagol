@@ -1,7 +1,7 @@
 GIT
-  remote: https://github.com/FreifunkMD/gollum.git
-  revision: 5529675ebac1a5879ff7036a78895e7303000636
-  branch: ffmd
+  remote: https://github.com/apfohl/gollum.git
+  revision: 2e2d3f5e8735f80038b29c29477a168d9f248667
+  branch: smeagol
   specs:
     gollum (3.0.0)
       github-markdown (~> 0.6.5)
@@ -44,7 +44,7 @@ GEM
     jwt (1.2.0)
     kgio (2.9.2)
     mime-types (1.25.1)
-    mini_portile (0.6.1)
+    mini_portile (0.6.2)
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)

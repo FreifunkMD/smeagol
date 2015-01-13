@@ -3,9 +3,9 @@ require 'gollum/app'
 require 'omnigollum'
 require 'omniauth-github'
 
-OmniAuth.config.full_host = ENV['WIKI_URL']
+OmniAuth.config.full_host = ENV['SMEAGOL_URL']
 
-gollum_path = ENV['WIKI_REPOSITORY_PATH']
+gollum_path = ENV['SMEAGOL_REPOSITORY_PATH']
 
 wiki_options = {
   universal_toc: false,
@@ -17,7 +17,7 @@ wiki_options = {
 
 omnigollum_options = {
   providers: Proc.new do
-    provider :github, ENV['WIKI_GITHUB_CLIENT_ID'], ENV['WIKI_GITHUB_CLIENT_SECRET']
+    provider :github, ENV['SMEAGOL_GITHUB_CLIENT_ID'], ENV['SMEAGOL_GITHUB_CLIENT_SECRET']
   end,
   dummy_auth: false
 }

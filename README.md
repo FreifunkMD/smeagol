@@ -1,11 +1,13 @@
-# Freifunk Magdeburg Wiki
+# Smeagol
+
+A standalone [Gollum](https://github.com/gollum/gollum) Wiki with GitHub OAuth22 support.
 
 ## Installation
 
-    $ useradd -d /var/lib/gollum -U -r -s /bin/bash gollum
+    $ useradd -d /var/lib/smeagol -U -r -s /bin/bash smeagol
     $ cd /var/lib
-    $ git clone https://github.com/apfohl/ffmd-wiki.git gollum
-    $ su - gollum
+    $ git clone https://github.com/apfohl/smeagol.git smeagol
+    $ su - smeagol
     $ mkdir wiki
     $ cd wiki && git init
     $ cd .. && mkdir nginx
@@ -13,31 +15,31 @@
     $ cp .env_example .env
     $ bundle install --deployment
     $ exit
-    $ bundle exec foreman export -a gollum -l /var/lib/gollum/log -u gollum initscript /etc/init.d
-    $ chmod +x /etc/init.d/gollum
-    $ chown -R www-data:www-data /var/lib/gollum/nginx/
-    $ service start gollum
+    $ bundle exec foreman export -a smeagol -l /var/lib/smeagol/log -u smeagol initscript /etc/init.d
+    $ chmod +x /etc/init.d/smeagol
+    $ chown -R www-data:www-data /var/lib/smeagol/nginx/
+    $ service start smeagol
 
 Edit ```.env```:
 
-    WIKI_URL=https://wiki.md.freifunk.net
-    WIKI_PATH=/var/lib/gollum
-    WIKI_REPOSITORY_PATH=/var/lib/gollum/wiki
+    WIKI_URL=https://wiki.example.com
+    WIKI_PATH=/var/lib/smeagol
+    WIKI_REPOSITORY_PATH=/var/lib/smeagol/wiki
     WIKI_GITHUB_CLIENT_ID=<client_id>
     WIKI_GITHUB_CLIENT_SECRET=<client_secret>
-    WIKI_USER=gollum
-    WIKI_GROUP=gollum
+    WIKI_USER=smeagol
+    WIKI_GROUP=smeagol
 
 Create ```/etc/nginx/sites-available/wiki``` with following content:
 
     upstream wiki {
-        server unix:/var/lib/gollum/unicorn/wiki.sock;
+        server unix:/var/lib/smeagol/unicorn/smeagol.sock;
     }
 
     server {
         listen 80;
         listen [::]:80;
-        server_name wiki.md.freifunk.net;
+        server_name wiki.example.com;
 
         location / {
             return 301 https://$host$request_uri;
@@ -48,9 +50,9 @@ Create ```/etc/nginx/sites-available/wiki``` with following content:
         listen [::]:443;
         include /etc/nginx/ssl_params;
 
-        server_name wiki.md.freifunk.net;
-        access_log /var/lib/gollum/nginx/access.log;
-        error_log /var/lib/gollum/nginx/error.log;
+        server_name wiki.example.com;
+        access_log /var/lib/smeagol/nginx/access.log;
+        error_log /var/lib/smeagol/nginx/error.log;
 
         location / {
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
