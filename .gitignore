@@ -1,7 +1,0 @@
-/vendor
-/.bundle
-/.env
-/unicorn/*.log
-/unicorn/wiki.pid
-/nginx
-/wiki
