@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'gollum', git: 'https://github.com/apfohl/gollum.git', branch: 'smeagol'
+gem 'gollum', git: 'https://github.com/FreifunkMD/gollum.git', branch: 'ffmd'
 gem 'github-markdown'
 gem 'omnigollum'
 gem 'omniauth-github'

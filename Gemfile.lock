@@ -1,7 +1,7 @@
 GIT
-  remote: https://github.com/apfohl/gollum.git
-  revision: 19ca3879d40a802cacf5665e98783796db1175cb
-  branch: smeagol
+  remote: https://github.com/FreifunkMD/gollum.git
+  revision: fa3b033a1e1ecf3ccf5be15f10a1e9595dbcfb50
+  branch: ffmd
   specs:
     gollum (4.0.1)
       gollum-lib (~> 4.0, >= 4.0.1)
