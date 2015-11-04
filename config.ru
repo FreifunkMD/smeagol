@@ -1,11 +1,10 @@
-#!/usr/bin/env ruby
 require 'gollum/app'
 require 'omnigollum'
 require 'omniauth-github'
 
 OmniAuth.config.full_host = ENV['SMEAGOL_URL']
 
-gollum_path = ENV['SMEAGOL_REPOSITORY_PATH']
+gollum_path = "#{ENV['APP_HOME']}/data"
 
 wiki_options = {
   universal_toc: false,
